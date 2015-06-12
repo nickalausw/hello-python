@@ -32,7 +32,7 @@ def hello():
 	return """
 	<html>
 	<body bgcolor="{}">
-<img src="http://cdn2.bigcommerce.com/n-zfvgw8/20ujxc35/product_images/uploaded_images/animal-logo.jpg?t=1398725710" alt="cdn2.bigcommerce.com" style="width:480px;height:500px;">
+	<center><img src="http://cdn2.bigcommerce.com/n-zfvgw8/20ujxc35/product_images/uploaded_images/animal-logo.jpg?t=1398725710" alt="cdn2.bigcommerce.com" style="width:480px;height:500px;">
 	<center><h1><font color="white">Hi, I'm ANIMAL, here's your GUID:<br/>
 	{}
 	<center><h1><font color="black">Hit Me! So I can break my RUSTY CAGE:<br/>
