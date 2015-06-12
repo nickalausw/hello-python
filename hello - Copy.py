@@ -4,7 +4,6 @@ import urlparse
 import redis
 import json
 import newrelic.agent
-import logging
 from flask import Flask
 app = Flask(__name__)
 my_uuid = str(uuid.uuid1())
@@ -19,11 +18,6 @@ r = redis.Redis(host=credentials['hostname'], port=credentials['port'], password
 r.set("hit_counter", 1)
 
 newrelic.agent.initialize('newrelic.ini')
-
-logging.basicConfig(filename='Animal.log',level=logging.DEBUG)
-logging.debug('This message should go to the log file')
-logging.info('So should this')
-logging.warning('And this, too')
 
 @app.route('/')
 def hello():
