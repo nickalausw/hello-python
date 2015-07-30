@@ -8,10 +8,10 @@ import logging
 from flask import Flask
 app = Flask(__name__)
 my_uuid = str(uuid.uuid1())
-ORANGE = "#FF9900"
+BLUE = "#0099FF"
 GREEN = "#33CC33"
 
-COLOR = ORANGE
+COLOR = BLUE
 
 rediscloud_service = json.loads(os.environ['VCAP_SERVICES'])['rediscloud'][0]
 credentials = rediscloud_service['credentials']
@@ -32,10 +32,11 @@ def hello():
 	return """
 	<html>
 	<body bgcolor="{}">
-	<center><img src="http://cdn2.bigcommerce.com/n-zfvgw8/20ujxc35/product_images/uploaded_images/animal-logo.jpg?t=1398725710" alt="cdn2.bigcommerce.com" style="width:480px;height:500px;">
-	<center><h1><font color="white">Hi, I'm ANIMAL, here's your GUID:<br/>
+	<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkDKEiHNerWOD-sfpKodevDksLQQQ1O0ef-CGXzatMuubCWXOKrg" alt="encrypted-tbn0.gstatic.com">
+	<center><h1><font color="white">Hi, Welcome to EMC MidMarket Central Div Solutions Summit,<br/>
+	<center><h1><font color="white">Here's your GUID:<br/>
 	{}
-	<center><h1><font color="black">Hit Me! So I can break my RUSTY CAGE:<br/>
+	<center><h1><font color="black">HIT COUNTER:<br/>
 	{}
 
 	</center>
